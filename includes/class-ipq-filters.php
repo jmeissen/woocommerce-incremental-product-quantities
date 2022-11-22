@@ -141,7 +141,7 @@ class IPQ_Filters {
 		$stock = $product->get_stock_quantity();
 
 		// Check stock status and if Out try Out of Stock value
-		if ( strlen( $stock ) != 0 and $stock <= 0 and isset( $values['min_oos'] ) and $values['min_oos'] != '' ) {
+		if ( $stock && strlen( $stock ) != 0 && $stock <= 0 && isset( $values['min_oos'] ) && $values['min_oos'] != '' ) {
 			$args['min_value'] = $values['min_oos'];
 
 		// Otherwise just check normal min
