@@ -10,7 +10,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( ! class_exists( 'IPQ' ) ) :
+if ( ! class_exists( 'Incremental_Product_Quantities' ) ) :
 
 class Incremental_Product_Quantities {
 
