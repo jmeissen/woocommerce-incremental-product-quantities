@@ -1,12 +1,12 @@
 <?php
-/*
-Plugin Name: WooCommerce Advanced Product Quantities
-Plugin URI: http://www.wpbackoffice.com/plugins/woocommerce-incremental-product-quantities/
-Description: Easily require your customers to buy a minimum / maximum / incremental amount of products to continue with their checkout. It is highly recommended to also install 'WooCommerce Thumbnail Input Quantities' to allow users to add your custom quantites from product thumbnails.
-Version: 2.1.9
-Author: WP BackOffice
-Author URI: http://www.wpbackoffice.com
-*/
+/**
+ * Plugin Name: WooCommerce Advanced Product Quantities
+ * Plugin URI: http://www.wpbackoffice.com/plugins/woocommerce-incremental-product-quantities/
+ * Description: Easily require your customers to buy a minimum / maximum / incremental amount of products to continue with their checkout. It is highly recommended to also install 'WooCommerce Thumbnail Input Quantities' to allow users to add your custom quantites from product thumbnails.
+ * Version: 2.2.0
+ * Author: WP BackOffice
+ * Author URI: http://www.wpbackoffice.com
+ */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -63,9 +63,9 @@ class Incremental_Product_Quantities {
 
 	}
 
-	/*
-	*	Adds default option values
-	*/
+	/**
+	 *	Adds default option values
+	 */
 	public function activation_hook() {
 
 		$options = get_option( 'ipq_options' );
@@ -105,11 +105,11 @@ class Incremental_Product_Quantities {
 		}
 	}
 
-	/*
-	*	'Checks' all user roles for pre-2.1 rules
-	*
-	*	@status To be depricated in version 2.3
-	*/
+	/**
+	 *	'Checks' all user roles for pre-2.1 rules
+	 *
+	 *	@status To be depricated in version 2.3
+	 */
 	public function update_rules_with_roles() {
 
 		// Construct default roles list to apply
@@ -139,9 +139,9 @@ class Incremental_Product_Quantities {
 		}
 	}
 
-	/*
-	*	Remove thumbnail plugin notice meta value
-	*/
+	/**
+	 *	Remove thumbnail plugin notice meta value
+	 */
 	public function deactivation_hook() {
 
 		$args = array(
@@ -156,10 +156,10 @@ class Incremental_Product_Quantities {
 		}
 	}
 
-	/*
-	*	Include JS to round any value that isn't a multiple of the
-	*	step up.
-	*/
+	/**
+	 *	Include JS to round any value that isn't a multiple of the
+	 *	step up.
+	 */
 	public function input_value_validation() {
 
 		global $post, $woocommerce;
@@ -223,9 +223,9 @@ class Incremental_Product_Quantities {
 		}
 	}
 
-	/*
-	*	Include Styles
-	*/
+	/**
+	 *	Include Styles
+	 */
 	public function quantity_styles() {
 
 		if ( is_admin() ) {
@@ -243,9 +243,9 @@ class Incremental_Product_Quantities {
 		}
 	}
 
-	/*
-	*	Set what version of WooCommerce the user has installed
-	*/
+	/**
+	 *	Set what version of WooCommerce the user has installed
+	 */
 	public function get_wc_version() {
 
 		if ( ! function_exists( 'get_plugins' ) )
@@ -261,9 +261,9 @@ class Incremental_Product_Quantities {
 		}
 	}
 
-	/*
-	* 	General Admin Notice to Encourage users to download thumbnail input as well
-	*/
+	/**
+	 * 	General Admin Notice to Encourage users to download thumbnail input as well
+	 */
 	public function thumbnail_plugin_notice() {
 
 		global $current_user;
@@ -294,9 +294,9 @@ class Incremental_Product_Quantities {
 		}
 	}
 
-	/*
-	*	Make Admin Notice Dismissable
-	*/
+	/**
+	 *	Make Admin Notice Dismissable
+	 */
 	public function thumbnail_plugin_notice_ignore() {
 		global $current_user;
 		$user_id = $current_user->ID;

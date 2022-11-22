@@ -19,13 +19,13 @@ class IPQ_Actions {
 
 	}
 
-	/*
-	*	Adds minimum product notification at correct action level
-	*	if users applies message
-	*
-	*	@access public
-	*	@return void
-	*/
+	/**
+	 *	Adds minimum product notification at correct action level
+	 *	if users applies message
+	 *
+	 *	@access public
+	 *	@return void
+	 */
 	public function apply_product_notification() {
 
 		$settings = get_option( 'ipq_options' );
@@ -55,12 +55,12 @@ class IPQ_Actions {
 		}
 	}
 
-	/*
-	*	Print the minimum quantity note based on user specs
-	*
-	*	@access public
-	*	@return void
-	*/
+	/**
+	 *	Print the minimum quantity note based on user specs
+	 *
+	 *	@access public
+	 *	@return void
+	 */
 	public function display_minimum_quantity_note() {
 
 		global $product;

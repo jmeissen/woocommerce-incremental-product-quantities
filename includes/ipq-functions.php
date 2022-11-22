@@ -1,13 +1,13 @@
 <?php
-/*
-*	Given the product, this will check which rule is being applied to a product
-* 	If there is a rule, the values will be returned otherwise it is inactive
-*	or overridden (from the product meta box).
-*
-*	@params object	$product WC_Product object
-*	@param 	string	User role to get rule from, otherwise current user role is used
-*	@return mixed 	String of rule status / Object top rule post
-*/
+/**
+ *	Given the product, this will check which rule is being applied to a product
+ * 	If there is a rule, the values will be returned otherwise it is inactive
+ *	or overridden (from the product meta box).
+ *
+ *	@params object	$product WC_Product object
+ *	@param 	string	User role to get rule from, otherwise current user role is used
+ *	@return mixed 	String of rule status / Object top rule post
+ */
 function wpbo_get_applied_rule( $product, $role = null ) {
 
 	// Check for site wide rule
@@ -27,14 +27,14 @@ function wpbo_get_applied_rule( $product, $role = null ) {
 	}
 }
 
-/*
-*	Get the Rule Object thats being applied to a given product.
-*	Will return null if no rule is applied.
-*
-*	@params object	$product WC_Product object
-*	@param 	string	User role to get rule from, otherwise current user role is used
-*	@return mixed 	Null if no rule applies / Object top rule post
-*/
+/**
+ *	Get the Rule Object thats being applied to a given product.
+ *	Will return null if no rule is applied.
+ *
+ *	@params object	$product WC_Product object
+ *	@param 	string	User role to get rule from, otherwise current user role is used
+ *	@return mixed 	Null if no rule applies / Object top rule post
+ */
 function wpbo_get_applied_rule_obj( $product, $role = null ) {
 
 	// Get Product Terms
@@ -138,14 +138,14 @@ function wpbo_get_applied_rule_obj( $product, $role = null ) {
 	return $top_rule;
 }
 
-/*
-*	Get the Input Value (min/max/step/priority/role/all) for a product given a rule
-*
-*	@params string	$type Product type
-*	@params object 	$produt Product Object
-*	@params object	$rule Quantity Rule post object
-*	@return void
-*/
+/**
+ *	Get the Input Value (min/max/step/priority/role/all) for a product given a rule
+ *
+ *	@params string	$type Product type
+ *	@params object 	$produt Product Object
+ *	@params object	$rule Quantity Rule post object
+ *	@return void
+ */
 function wpbo_get_value_from_rule( $type, $product, $rule ) {
 
 	// Validate $type
@@ -348,9 +348,13 @@ function wpbo_get_value_from_rule( $type, $product, $rule ) {
 	}
 }
 
-/*
-*	Validate inputs as numbers and set them to null if 0
-*/
+/**
+ * Validate inputs as numbers and set them to null if 0
+ *
+ * @param string $number Inputted to be validated.
+ *
+ * @return integer|null
+ */
 function wpbo_validate_number( $number ) {
 
 	$number = stripslashes( $number );

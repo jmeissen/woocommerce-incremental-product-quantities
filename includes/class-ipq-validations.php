@@ -12,57 +12,57 @@ class IPQ_Quantity_Validations {
 
 	}
 
-	/*
-	*	Add to Cart Validation to ensure quantity ordered follows the user's rules.
-	*
-	*	@access public
-	*	@param  boolean passed
-	*	@param  int		product_id
-	*	@param  int 	quantity
-	*	@param  boolean from_cart
-	*	@param  int 	variation_id
-	*	@param  array	variations
-	*	@param	string 	cart_item_key
-	*	@return boolean
-	*
-	*/
+	/**
+	 *	Add to Cart Validation to ensure quantity ordered follows the user's rules.
+	 *
+	 *	@access public
+	 *	@param  boolean passed
+	 *	@param  int		product_id
+	 *	@param  int 	quantity
+	 *	@param  boolean from_cart
+	 *	@param  int 	variation_id
+	 *	@param  array	variations
+	 *	@param	string 	cart_item_key
+	 *	@return boolean
+	 *
+	 */
 	public function add_to_cart_validation( $passed, $product_id, $quantity, $variation_id = null, $variations = null, $cart_item_key = null ) {
 
 		return $this->validate_single_product( $passed, $product_id, $quantity, false, $variation_id, $variations );
 
 	}
 
-	/*
-	*	Cart Update Validation to ensure quantity ordered follows the user's rules.
-	*
-	*	@access public
-	*	@param  boolean passed
-	*	@param  string	cart_item_key
-	*	@param  array 	values
-	*	@param  int 	quantity
-	*	@return boolean
-	*
-	*/
+	/**
+	 *	Cart Update Validation to ensure quantity ordered follows the user's rules.
+	 *
+	 *	@access public
+	 *	@param  boolean passed
+	 *	@param  string	cart_item_key
+	 *	@param  array 	values
+	 *	@param  int 	quantity
+	 *	@return boolean
+	 *
+	 */
 	public function update_cart_validation( $passed, $cart_item_key, $values, $quantity ) {
 
 		return $this->validate_single_product( $passed, $values['product_id'], $quantity, true, $values['variation_id'], $values['variation'] );
 
 	}
 
-	/*
-	*	Validates a single product based on the quantity rules applied to it.
-	*	It will also validate based on the quantity in the cart.
-	*
-	*	@access public
-	*	@param  boolean passed
-	*	@param  int		product_id
-	*	@param  int 	quantity
-	*	@param  boolean from_cart
-	*	@param  int 	variation_id
-	*	@param  array	variations
-	*	@return boolean
-	*
-	*/
+	/**
+	 *	Validates a single product based on the quantity rules applied to it.
+	 *	It will also validate based on the quantity in the cart.
+	 *
+	 *	@access public
+	 *	@param  boolean passed
+	 *	@param  int		product_id
+	 *	@param  int 	quantity
+	 *	@param  boolean from_cart
+	 *	@param  int 	variation_id
+	 *	@param  array	variations
+	 *	@return boolean
+	 *
+	 */
 	public function validate_single_product( $passed, $product_id, $quantity, $from_cart, $variation_id = null, $variations = null ) {
 		global $woocommerce, $product, $ipq;
 

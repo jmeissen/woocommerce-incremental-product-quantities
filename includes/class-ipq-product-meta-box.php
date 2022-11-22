@@ -11,9 +11,9 @@ class IPQ_Quantity_Meta_Boxes {
 		add_action( 'save_post', array( $this, 'save_quantity_meta_data' ) );
 	}
 
-	/*
-	*	Register Rule Meta Box for Product Page for all but external products
-	*/
+	/**
+	 *	Register Rule Meta Box for Product Page for all but external products
+	 */
 	public function meta_box_create() {
 		global $post, $woocommerce;
 
@@ -36,9 +36,9 @@ class IPQ_Quantity_Meta_Boxes {
 		}
 	}
 
-	/*
-	*	Display Rule Meta Box
-	*/
+	/**
+	 *	Display Rule Meta Box
+	 */
 	function product_meta_box_content( $post ) {
 		global $product;
 		global $woocommerce;
@@ -215,9 +215,9 @@ class IPQ_Quantity_Meta_Boxes {
 		<?php
 	}
 
-	/*
-	*	Handle Saving Meta Box Data
-	*/
+	/**
+	 *	Handle Saving Meta Box Data
+	 */
 	public function save_quantity_meta_data( $post_id ) {
 
 		// Validate Post Type

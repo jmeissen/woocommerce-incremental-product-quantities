@@ -16,15 +16,15 @@ class IPQ_Filters {
 		add_filter( 'woocommerce_quantity_input_args', array( $this, 'input_set_all_values' ), 1, 2 );
 	}
 
-	/*
-	*	Filter Minimum Quantity Value for Input Boxes for Cart
-	*
-	*	@access public
-	*	@param  int 	default
-	*	@param  obj		product
-	*	@return int		step
-	*
-	*/
+	/**
+	 *	Filter Minimum Quantity Value for Input Boxes for Cart
+	 *
+	 *	@access public
+	 *	@param  int 	default
+	 *	@param  obj		product
+	 *	@return int		step
+	 *
+	 */
 	public function input_min_value( $default, $product ) {
 
 		// Return Defaults if it isn't a simple product
@@ -45,15 +45,15 @@ class IPQ_Filters {
 		}
 	}
 
-	/*
-	*	Filter Maximum Quantity Value for Input Boxes for Cart
-	*
-	*	@access public
-	*	@param  int 	default
-	*	@param  obj		product
-	*	@return int		step
-	*
-	*/
+	/**
+	 *	Filter Maximum Quantity Value for Input Boxes for Cart
+	 *
+	 *	@access public
+	 *	@param  int 	default
+	 *	@param  obj		product
+	 *	@return int		step
+	 *
+	 */
 	public function input_max_value( $default, $product ) {
 
 		// Return Defaults if it isn't a simple product
@@ -75,15 +75,15 @@ class IPQ_Filters {
 		}
 	}
 
-	/*
-	*	Filter Step Quantity Value for Input Boxes woocommerce_quantity_input_step for Cart
-	*
-	*	@access public
-	*	@param  int 	default
-	*	@param  obj		product
-	*	@return int		step
-	*
-	*/
+	/**
+	 *	Filter Step Quantity Value for Input Boxes woocommerce_quantity_input_step for Cart
+	 *
+	 *	@access public
+	 *	@param  int 	default
+	 *	@param  obj		product
+	 *	@return int		step
+	 *
+	 */
 	public function input_step_value( $default, $product ) {
 
 		// Return Defaults if it isn't a simple product
@@ -105,15 +105,15 @@ class IPQ_Filters {
 		}
 	}
 
-	/*
-	*	Filter Step, Min and Max for Quantity Input Boxes on product pages
-	*
-	*	@access public
-	*	@param  array 	args
-	*	@param  obj		product
-	*	@return array	vals
-	*
-	*/
+	/**
+	 *	Filter Step, Min and Max for Quantity Input Boxes on product pages
+	 *
+	 *	@access public
+	 *	@param  array 	args
+	 *	@param  obj		product
+	 *	@return array	vals
+	 *
+	 */
 	public function input_set_all_values( $args, $product ) {
 
 		// Return Defaults if it isn't a simple product
