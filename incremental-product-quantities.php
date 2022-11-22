@@ -162,7 +162,7 @@ class Incremental_Product_Quantities {
 	 */
 	public function input_value_validation() {
 
-		global $post, $woocommerce;
+		global $post;
 
 		// Only display script if we are on a single product or cart page
 		if ( is_object( $post ) and $post->post_type == 'product' or is_cart() ) {
