@@ -1,4 +1,15 @@
-## WooCommerce Advanced Product Quantities  
+# This is a fork that will maintain compatibility with future releases of Woo, WP & PHP
+
+The author seems to have abandoned the plugin, so I have not tried to contact him. Either way, this plugin works. If it doesn't open an issue or send a pull request, or not. Anyway, I'm keeping this plugin alive for personal use here.
+
+## My changelog
+
+* Add negative numbers support for `max` & `max_oos` post meta
+* Fix rule-role associations for signed in users that were put in wp_transient
+* Fix Woo deprecated warnings (as also done in the pull request by some dude)
+* Fix PHP8.1 deprecated warnings
+
+## WooCommerce Advanced Product Quantities
 Contributors: wpbackoffice
 
 Tags: woocommerce, product quantities, input values
@@ -9,7 +20,7 @@ Requires at least: 3.5
 
 Tested up to: 4.1
 
-Stable tag: 2.1.9
+Stable tag: 2.2.0
 
 License: GPLv2
 
@@ -17,7 +28,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Easily require your customers to buy a minimum / maximum / incremental amount of products to continue with their checkout.
 
-## Description 
+## Description
 
 With WooCommerce Advanced Product Quantities you can easily create rules that restrict the amount of products a user can buy at once. Set Minimum, Maximum and Step values for any product type and must be valid before a customer can proceed to checkout.
 
@@ -45,12 +56,12 @@ With WooCommerce Advanced Product Quantities you can easily create rules that re
 * Now fully supports ALL PRODUCT TYPES, simple, variable, grouped and affiliate
 * Create Site Wide rules that apply to every product unless overwritten on a per-product basis
 * Create rules by Product Tags (opposed to just categories)
-* Woocommerce +2.0 compatible 
+* Woocommerce +2.0 compatible
 * Allows rules to have a minimum of 0
 
 [Plugin's Official Documentation and Support Page](http://www.wpbackoffice.com/plugins/woocommerce-incremental-product-quantities)
 
-## Installation 
+## Installation
 
 Automatic WordPress Installation
 
@@ -62,7 +73,7 @@ Automatic WordPress Installation
 
 Manual Installation
 
-1. Download the latest version of the plugin from WooCommerce Incremental 
+1. Download the latest version of the plugin from WooCommerce Incremental
 2. Product Quantities wordpress page.
 3. Uncompress the file
 4. Upload the uncompressed directory to ‘/wp-content/plugins/’ via FTP
@@ -70,7 +81,7 @@ Manual Installation
 6. Set Rules for categories by clicking the new ‘Quantity Rules’ sidebar option or assign per-product rules by using the new metabox on your product page.
 
 ## Upgrade Notice
-####2.1.5 
+####2.1.5
 * Minor bug fix, couldn't unset max out of stock value
 
 ####2.1.4
@@ -78,11 +89,11 @@ Manual Installation
 
 ####2.1.3
 * Added Quantity Message Options
-* Added Out of Stock min/max values 
+* Added Out of Stock min/max values
 * Fixed 0 quantity appearing as 1 bug
 * Minor class tweaks
 
-####2.1.2 
+####2.1.2
 Default user role bug fix.
 
 ####2.1.1
@@ -95,9 +106,9 @@ Added user role support for Quantity Rules, improved performance / user interfac
 ####2.0.0
 This major upgrade adds the following features - Now supports all product types, allows you to create site wide rules, and rules by product tags. It is recommended that you back up and test your site with 2.0 before going live.
 
-## Changelog 
+## Changelog
 
-####2.1.2 
+####2.1.2
 * Default user role bug fix.
 
 ####2.1.1
@@ -117,12 +128,12 @@ Minor bug fixes.
 * Code reconfiguration puts everything into classes, the way it should be.
 
 ####1.1.4
-* Added back WC 2.0.x validation compatability. 
+* Added back WC 2.0.x validation compatability.
 
 ####1.1.3
 * Minor bug fixes.
 
-####1.1.2 
+####1.1.2
 * Undefined variable bug fix.
 
 ####1.1.1
@@ -145,11 +156,11 @@ Minor bug fixes.
 * Fixed cart bug, added additional validation so users can't enter minimum values that are less then the step value.
 
 ####1.0.5
-* Fixed additional bug related to missing input values and error messages on some installs. Also updated notice window. 
+* Fixed additional bug related to missing input values and error messages on some installs. Also updated notice window.
 
 ####1.0.4
-* Style sheet and link update. 
-* Added potential solution for niche validation problem.  
+* Style sheet and link update.
+* Added potential solution for niche validation problem.
 
 ####1.0.3
 * Readme.txt updates.
