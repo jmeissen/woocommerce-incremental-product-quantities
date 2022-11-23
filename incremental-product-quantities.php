@@ -198,7 +198,7 @@ class Incremental_Product_Quantities {
 					$stock = $pro->get_stock_quantity();
 
 					// Check if the product is under stock management and out of stock
-					if ( strlen( $stock ) != 0 and $stock <= 0 ) {
+					if ( $stock && strlen( $stock ) != 0 && $stock <= 0 ) {
 
 						if ( $values['min_oos'] != '' ) {
 							$values['min_value'] = $values['min_oos'];
