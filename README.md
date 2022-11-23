@@ -4,6 +4,7 @@ The author seems to have abandoned the plugin, so I have not tried to contact hi
 
 ## My changelog
 
+* Fix product variation rules in cart
 * Add negative numbers support for `max` & `max_oos` post meta
 * Fix rule-role associations for signed in users that were put in wp_transient
 * Fix Woo deprecated warnings (as also done in the pull request by some dude)
@@ -20,7 +21,7 @@ Requires at least: 3.5
 
 Tested up to: 4.1
 
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 
 License: GPLv2
 
