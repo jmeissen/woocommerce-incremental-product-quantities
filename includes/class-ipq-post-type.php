@@ -535,7 +535,7 @@ class IPQ_Quantity_Rule_Post_Type {
 			$max = $_POST['max'];
 
 			// Validate Max is not less then Min
-			if ( isset( $min ) and $max < $min and $max != 0 ) {
+			if ( isset( $min ) && $max < $min && $max > 0) {
 				$max = $min;
 			}
 
@@ -547,14 +547,10 @@ class IPQ_Quantity_Rule_Post_Type {
 			$max_oos = $_POST['max_oos'];
 
 			// Max must be bigger then min
-			if ( $max_oos != '' and isset( $min_oos ) and $min_oos != 0 ) {
-				if ( $min_oos > $max_oos )
-					$max_oos = $min_oos;
-
-			} elseif ( $max_oos != '' and isset( $min ) and $min != 0 ){
-				if ( $min > $max_oos ) {
-					$max_oos = $min;
-				}
+			if ( $max_oos != '' && isset( $min_oos ) && $min_oos > 0 && $min_oos > $max_oos) {
+				$max_oos = $min_oos;
+			} elseif ( $max_oos != '' && isset( $min ) && $min > 0 && $min > $max_oos ){
+				$max_oos = $min;
 			}
 
 			update_post_meta( $post_id, '_max_oos', wpbo_validate_number( $max_oos ) );
