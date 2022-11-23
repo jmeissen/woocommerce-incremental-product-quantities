@@ -124,6 +124,10 @@ class IPQ_Filters {
 		}
 		*/
 
+		if ( $product->get_type() === 'variation' ) {
+			$product = wc_get_product( $product->get_parent_id() );
+		}
+
 		// Get Rule
 		$rule = wpbo_get_applied_rule( $product );
 
