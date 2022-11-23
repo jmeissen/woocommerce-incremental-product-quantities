@@ -176,14 +176,11 @@ class Incremental_Product_Quantities {
 			// Only localize parameters for variable products
 			if ( ! is_cart() ) {
 
-				// Get the product
-				$pro = wc_get_product( $post );
-
-				// Check if variable
-				if ( $pro->get_type() == 'variable' ) {
+				$product = wc_get_product( $post );
+				if ( $product->get_type() == 'variable' ) {
 
 					// See what rules are being applied
-					$rule_result = wpbo_get_applied_rule( $pro );
+					$rule_result = wpbo_get_applied_rule( $product );
 
 					// If the rule result is inactive, we're done
 					if ( $rule_result == 'inactive' || $rule_result == null ) {
@@ -191,11 +188,11 @@ class Incremental_Product_Quantities {
 
 					// Get values for Override, Sitewide and Rule Controlled Products
 					} else {
-						$values = wpbo_get_value_from_rule( 'all', $pro, $rule_result );
+						$values = wpbo_get_value_from_rule( 'all', $product, $rule_result );
 					}
 
 					// Check if the product is out of stock
-					$stock = $pro->get_stock_quantity();
+					$stock = $product->get_stock_quantity();
 
 					// Check if the product is under stock management and out of stock
 					if ( $stock && strlen( $stock ) != 0 && $stock <= 0 ) {
