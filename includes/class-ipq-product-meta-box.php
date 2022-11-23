@@ -15,7 +15,7 @@ class IPQ_Quantity_Meta_Boxes {
 	 *	Register Rule Meta Box for Product Page for all but external products
 	 */
 	public function meta_box_create() {
-		global $post, $woocommerce;
+		global $post;
 
 		if ( $post->post_type == 'product' ) {
 
@@ -40,8 +40,6 @@ class IPQ_Quantity_Meta_Boxes {
 	 *	Display Rule Meta Box
 	 */
 	function product_meta_box_content( $post ) {
-		global $product;
-		global $woocommerce;
 		global $wp_roles;
 
 		// Get the product and see what rules are being applied

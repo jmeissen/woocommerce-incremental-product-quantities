@@ -143,11 +143,9 @@ class IPQ_Filters {
 		// Check stock status and if Out try Out of Stock value
 		if ( $stock && strlen( $stock ) != 0 && $stock <= 0 && isset( $values['min_oos'] ) && $values['min_oos'] != '' ) {
 			$args['min_value'] = $values['min_oos'];
-
 		// Otherwise just check normal min
 		} elseif ( $values['min_value'] != ''  ) {
 			$args['min_value'] 	 = $values['min_value'];
-
 		// If no min, try step
 		} elseif ( $values['min_value'] == '' and $values['step'] != '' ) {
 			$args['min_value'] 	 = $values['step'];
@@ -156,7 +154,6 @@ class IPQ_Filters {
 		// Check stock status and if Out try Out of Stock value
 		if ( $stock <= 0 and isset( $values['min_oos'] ) and $values['max_oos'] != '' ) {
 			$args['max_value'] = $values['max_oos'];
-
 		// Otherwise just check normal max
 		} elseif ($values['max_value'] != ''  ) {
 			$args['max_value'] 	 = $values['max_value'];

@@ -186,7 +186,7 @@ class Incremental_Product_Quantities {
 					$rule_result = wpbo_get_applied_rule( $pro );
 
 					// If the rule result is inactive, we're done
-					if ( $rule_result == 'inactive' or $rule_result == null ) {
+					if ( $rule_result == 'inactive' || $rule_result == null ) {
 						return;
 
 					// Get values for Override, Sitewide and Rule Controlled Products
