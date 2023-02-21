@@ -28,7 +28,7 @@ class IPQ_Filters {
 	public function input_min_value( $default, $product ) {
 
 		// Return Defaults if it isn't a simple product
-		if( $product->get_type() != 'simple' ) {
+		if( ! $product || $product->get_type() != 'simple' ) {
 			return $default;
 		}
 
@@ -57,7 +57,7 @@ class IPQ_Filters {
 	public function input_max_value( $default, $product ) {
 
 		// Return Defaults if it isn't a simple product
-		if( $product->get_type() != 'simple' ) {
+		if( ! $product || $product->get_type() != 'simple' ) {
 			return $default;
 		}
 
