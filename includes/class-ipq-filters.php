@@ -87,7 +87,7 @@ class IPQ_Filters {
 	public function input_step_value( $default, $product ) {
 
 		// Return Defaults if it isn't a simple product
-		if( $product->get_type() != 'simple' ) {
+		if ( ! $product || $product->get_type() != 'simple' ) {
 			return $default;
 		}
 
